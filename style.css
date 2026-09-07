@@ -52,7 +52,7 @@ body{
    Raised: box-shadow pair reads as a soft bump off the page.
    Pressed ("on"/active state): shadow flips inward. */
 .bar,.nav a,.spine,.col,.card,.stop,.good,.bad,.step,.num,.trig,.w,
-.todo,.tiles a.tile,table,.eg{
+.todo,.tile,table,.eg{
   box-shadow:6px 6px 14px var(--shadow-d), -6px -6px 14px var(--shadow-l);
 }
 .bar button,.nav a{
@@ -113,7 +113,7 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 @media(max-width:640px){.pair{grid-template-columns:1fr}}
 
 .col{border-radius:var(--r-lg); padding:22px; background:var(--card)}
-.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)} .col.plain{background:var(--card)}
+.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)}
 .col.g h3{color:var(--g)} .col.c h3{color:var(--c)}
 .col h3{margin:0 0 4px; font-size:1.15em}
 .col .tag{font-size:.8em; font-weight:700; color:var(--soft); display:block; margin-bottom:12px}
@@ -126,8 +126,10 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 .card p:last-child{margin-bottom:0}
 
 /* .stop/.good/.bad share an accent-bar pseudo-element; each sets --accent-bar
-   to its own accent color before the shared ::before rule paints it. */
-.stop,.good,.bad{border-radius:var(--r-lg); padding:20px 22px; margin-bottom:16px; position:relative}
+   to its own accent color before the shared ::before rule paints it.
+   .stop uses slightly larger spacing since it's typically a standalone
+   warning block rather than one of a paired list of items. */
+.stop,.good,.bad{border-radius:var(--r-lg); position:relative}
 .stop::before,.good::before,.bad::before{
   content:""; position:absolute; left:0; top:14px; bottom:14px; width:5px;
   border-radius:var(--r-pill); background:var(--accent-bar)}
@@ -136,9 +138,9 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 .stop h3{color:var(--stop); margin:0 0 10px}
 .stop ul{margin:0; padding-left:20px}
 
-.good{background:var(--ok-bg); --accent-bar:var(--ok)}
+.good{background:var(--ok-bg); --accent-bar:var(--ok); padding:20px 22px; margin-bottom:16px}
 .good h3{color:var(--ok); margin:0 0 8px}
-.bad{background:var(--stop-bg); --accent-bar:var(--stop)}
+.bad{background:var(--stop-bg); --accent-bar:var(--stop); padding:20px 22px; margin-bottom:16px}
 .bad h3{color:var(--stop); margin:0 0 8px}
 .eg{background:var(--card); border-radius:var(--r-sm);
     padding:15px 17px; margin:10px 0; font-size:.94em; white-space:pre-wrap}
