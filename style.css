@@ -113,6 +113,7 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 @media(max-width:640px){.pair{grid-template-columns:1fr}}
 
 .col{border-radius:var(--r-lg); padding:22px; background:var(--card)}
+.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)}
 .col.g h3{color:var(--g)} .col.c h3{color:var(--c)}
 .col h3{margin:0 0 4px; font-size:1.15em}
 .col .tag{font-size:.8em; font-weight:700; color:var(--soft); display:block; margin-bottom:12px}
@@ -158,12 +159,12 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
       padding:20px 22px; margin-bottom:16px}
 .trig h3{margin:0 0 11px}
 .words{display:flex; flex-wrap:wrap; gap:8px}
-.w{font-size:.87em; font-weight:700; padding:6px 13px; border-radius:var(--r-pill)}
-.w.g{background:var(--g-bg); color:var(--g)}
-.w.c{background:var(--c-bg); color:var(--c)}
+.w{font-size:.87em; font-weight:700; padding:6px 13px; border-radius:var(--r-pill); border:1.5px solid transparent}
+.w.g{background:var(--g-bg); color:var(--g); border-color:var(--g)}
+.w.c{background:var(--c-bg); color:var(--c); border-color:var(--c)}
 
 .todo{border-radius:var(--r-lg); padding:22px;
-      background:var(--card); margin-bottom:16px; opacity:.8}
+      background:var(--card); margin-bottom:16px}
 .todo h3{margin:0 0 8px; color:var(--soft)}
 .todo p{font-size:.92em; color:var(--soft); margin:0}
 
