@@ -113,7 +113,7 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 @media(max-width:640px){.pair{grid-template-columns:1fr}}
 
 .col{border-radius:var(--r-lg); padding:22px; background:var(--card)}
-.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)}
+.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)} .col.plain{background:var(--card)}
 .col.g h3{color:var(--g)} .col.c h3{color:var(--c)}
 .col h3{margin:0 0 4px; font-size:1.15em}
 .col .tag{font-size:.8em; font-weight:700; color:var(--soft); display:block; margin-bottom:12px}
@@ -125,28 +125,30 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 .card h3{margin:0 0 6px}
 .card p:last-child{margin-bottom:0}
 
-.stop{background:var(--stop-bg); border-radius:var(--r-lg);
-      padding:22px; margin-bottom:18px; position:relative}
-.stop::before{content:"";position:absolute; left:0; top:14px; bottom:14px; width:5px;
-      border-radius:var(--r-pill); background:var(--stop)}
+/* .stop/.good/.bad share an accent-bar pseudo-element; each sets --accent-bar
+   to its own accent color before the shared ::before rule paints it. */
+.stop,.good,.bad{border-radius:var(--r-lg); padding:20px 22px; margin-bottom:16px; position:relative}
+.stop::before,.good::before,.bad::before{
+  content:""; position:absolute; left:0; top:14px; bottom:14px; width:5px;
+  border-radius:var(--r-pill); background:var(--accent-bar)}
+
+.stop{background:var(--stop-bg); --accent-bar:var(--stop); padding:22px; margin-bottom:18px}
 .stop h3{color:var(--stop); margin:0 0 10px}
 .stop ul{margin:0; padding-left:20px}
 
-.good{background:var(--ok-bg); border-radius:var(--r-lg);
-      padding:20px 22px; margin-bottom:16px; position:relative}
-.good::before{content:"";position:absolute; left:0; top:14px; bottom:14px; width:5px;
-      border-radius:var(--r-pill); background:var(--ok)}
+.good{background:var(--ok-bg); --accent-bar:var(--ok)}
 .good h3{color:var(--ok); margin:0 0 8px}
-.bad{background:var(--stop-bg); border-radius:var(--r-lg);
-     padding:20px 22px; margin-bottom:16px; position:relative}
-.bad::before{content:"";position:absolute; left:0; top:14px; bottom:14px; width:5px;
-      border-radius:var(--r-pill); background:var(--stop)}
+.bad{background:var(--stop-bg); --accent-bar:var(--stop)}
 .bad h3{color:var(--stop); margin:0 0 8px}
 .eg{background:var(--card); border-radius:var(--r-sm);
     padding:15px 17px; margin:10px 0; font-size:.94em; white-space:pre-wrap}
 
 .step{display:flex; gap:16px; align-items:flex-start; background:var(--card);
       border-radius:var(--r-lg); padding:19px 21px; margin-bottom:14px}
+/* Gradient ring: two background layers (solid card color clipped to the
+   padding-box, accent gradient clipped to the border-box) plus a transparent
+   border let the circle keep a high-contrast solid center for the number
+   while showing a colorful gradient only in the thin border ring. */
 .num{flex:0 0 34px; height:34px; border-radius:50%; color:var(--ink);
      background:linear-gradient(var(--card),var(--card)) padding-box, var(--grad-accent) border-box;
      border:3px solid transparent;
