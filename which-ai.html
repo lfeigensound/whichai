@@ -118,19 +118,82 @@
 
   <p><b>Both:</b> when it drifts, start a new chat. Arguing it back on track costs more time than restarting.</p>
 
-  <h2>To fill in</h2>
+  <h2>Gemini Notebook — step by step</h2>
 
-  <div class="todo">
-    <h3>Gemini Notebook — step by step</h3>
-    <p>How to make a notebook, add sources, current limits. Write it as you'd explain it to yourself on a bad day.</p>
+  <div class="card">
+    <h3>Create the workspace</h3>
+    <p>Go to <b>notebooklm.google.com</b>. Click "+ New Notebook" and give it a strict project name. Pro gives you up to 500 notebooks — keep projects completely isolated.</p>
   </div>
-  <div class="todo">
-    <h3>Deep Research — running one properly</h3>
-    <p>Where the toggle is, reviewing the plan before it runs, how long to expect, where to save the output.</p>
+
+  <div class="card">
+    <h3>Source ingestion</h3>
+    <p>Open the left "Sources" panel and click "Add source". Upload from Drive (Docs, Sheets, PDFs, audio transcripts — up to 300 sources on Pro, max 500k words/200MB each). Or click "Web" to search the live internet directly inside the notebook.</p>
   </div>
-  <div class="todo">
-    <h3>Your own trigger words</h3>
-    <p>Add the phrases you actually type. The lists above are a starting point.</p>
+
+  <div class="card">
+    <h3>Fast Research vs. Deep Research</h3>
+    <p><b>Fast Research:</b> when you need specific documents now. Scans the web in seconds and gives you a checklist of candidates. Review, check the relevant ones, click Import.</p>
+    <p><b>Deep Research:</b> when starting empty. An agent browses dozens of sites for 2–5 minutes, drafts a comprehensive briefing, and automatically imports both the report and the cited sources into your notebook.</p>
+  </div>
+
+  <div class="card">
+    <h3>Query &amp; verify</h3>
+    <p>Select the checkboxes of the sources you want active. Type your prompt. Every fact includes a numbered citation tag — click it to jump to the exact source text. Zero guessing, zero hallucinating beyond your source stack.</p>
+  </div>
+
+  <h2>Deep Research — running one properly</h2>
+
+  <div class="card">
+    <h3>Path A: In-Notebook Research</h3>
+    <p><b>Where:</b> Sources Panel → Web → Select "Deep Research".</p>
+    <p><b>Function:</b> Ingests findings directly into your notebook.</p>
+    <p><b>Pacing:</b> Runs 2–5 minutes in background.</p>
+    <p><b>Best for:</b> Populating a brand-new project with a synthesized briefing report and curated external references without context switching.</p>
+  </div>
+
+  <div class="card">
+    <h3>Path B: Macro Research in Gemini App</h3>
+    <p><b>Where:</b> gemini.google.com — click the tools (+) button in the prompt bar → select the "Deep Research" chip.</p>
+    <p><b>Function:</b> Generates an exhaustive standalone report (5–15+ pages).</p>
+    <p><b>Pacing:</b> 5 to 15 minutes. Gemini first generates an editable research plan.</p>
+    <p><b>Review the plan:</b> Always review the plan card before starting. Delete irrelevant search branches; add mandatory regulatory or technical angles. Click "Start Research".</p>
+    <p><b>Saving:</b> Export directly to Google Docs (one click), or copy into Gemini Notebook for source-grounded cross-examination.</p>
+  </div>
+
+  <h2>When to use what</h2>
+
+  <div class="card">
+    <h3>Standard Notebook ingestion</h3>
+    <p>You already have proprietary PDFs, contracts, spreadsheets, or internal transcripts that the public internet cannot see.</p>
+  </div>
+
+  <div class="card">
+    <h3>Fast Research</h3>
+    <p>You know the topic, you just need 3–5 current articles, official guidelines, or press releases added to your notebook right now.</p>
+  </div>
+
+  <div class="card">
+    <h3>Deep Research</h3>
+    <p>You are mapping unfamiliar territory, conducting multi-vector market research, or synthesizing cross-disciplinary policy without existing documentation.</p>
+  </div>
+
+  <h2>Critical limitations</h2>
+
+  <div class="stop">
+    <h3>Know these before you start</h3>
+    <ul>
+      <li><b>Frozen snapshots:</b> Web sources pulled via Fast or Deep Research are static snapshots taken at import time. If the live website changes, the notebook will not know unless you manually delete and re-import.</li>
+      <li><b>Source dilution risk:</b> Deep Research can pull tertiary summaries, forum threads, or SEO blog posts. Inspect the discovered source list before leaving them active.</li>
+      <li><b>Hard silos:</b> Notebooks cannot read other notebooks. Pro's 300-source limit applies inside a single notebook boundary.</li>
+    </ul>
+  </div>
+
+  <h2>Trigger words for Gemini</h2>
+
+  <div class="card">
+    <p><b>"Find current 2026 technical benchmarks for [X] and import the primary vendor sources."</b> — Notebook + Fast Research</p>
+    <p><b>"Build a comprehensive briefing on [emerging regulation/topic], mapping historical precedents, stakeholder positions, and current draft mandates."</b> — Notebook + Deep Research</p>
+    <p><b>"Based strictly on Sources 3 and 7, extract all contractual liability exceptions and cross-reference against the pricing schedule."</b> — Notebook Query (Internal)</p>
   </div>
 
 </div>
