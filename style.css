@@ -69,19 +69,19 @@ body{
 .bar .wrap{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
 .bar span{font-size:13px; color:var(--soft); font-weight:700}
 .bar button{font-family:inherit; font-size:13.5px; font-weight:700; padding:8px 16px;
-     border:none; background:var(--card); color:var(--ink);
+     border:2px solid transparent; background:var(--card); color:var(--ink);
      border-radius:var(--r-pill); cursor:pointer; transition:all 0.2s}
 .bar button:hover{color:var(--g)}
-.bar button.on{background:var(--card); color:var(--g)}
+.bar button.on{background:var(--g-bg); color:var(--g); border-color:var(--g)}
 .bar button:focus-visible,a:focus-visible{
   outline:3px solid var(--g); outline-offset:3px; box-shadow:none}
 
 /* ── nav ─────────────────────────────────────── */
 .nav{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px}
 .nav a{font-size:.87em; font-weight:700; text-decoration:none; color:var(--soft);
-     padding:9px 16px; border:none; border-radius:var(--r-pill); background:var(--card)}
+     padding:9px 16px; border:2px solid transparent; border-radius:var(--r-pill); background:var(--card)}
 .nav a:hover{color:var(--ink)}
-.nav a[aria-current]{color:var(--g)}
+.nav a[aria-current]{background:var(--g-bg); color:var(--g); border-color:var(--g)}
 
 .back{display:inline-block; font-size:.88em; font-weight:700; color:var(--soft);
      text-decoration:none; margin-bottom:20px}
@@ -188,9 +188,8 @@ th{background:transparent; font-weight:700; color:var(--soft)}
 @media print{
   .bar,.nav,.back{display:none}
   body{background:#fff; font-size:11pt; padding:0}
-  .col,.stop,.step,.trig,.spine,.card,.good,.bad,.bar,.nav a,table,.eg,.tiles a.tile,
-  .bar button,.num{box-shadow:none!important}
-  .col,.stop,.step,.trig,.spine,.card,.good,.bad{break-inside:avoid; border:1px solid #ccc}
+  *{box-shadow:none!important}
+  .col,.stop,.step,.trig,.spine,.card,.good,.bad{break-inside:avoid; border:1px solid var(--rule)}
   h2{break-after:avoid}
 }
 @media (prefers-reduced-motion:reduce){
