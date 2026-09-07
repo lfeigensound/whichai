@@ -50,8 +50,10 @@ body{
 
 /* ── neumorphic surfaces ──────────────────────────────────────
    Raised: box-shadow pair reads as a soft bump off the page.
-   Pressed ("on"/active state): shadow flips inward. */
-.bar,.nav a,.spine,.col,.card,.stop,.good,.bad,.step,.num,.trig,.w,
+   Pressed ("on"/active state): shadow flips inward.
+   Note: `.bar button` and `.nav a` get their own (smaller) shadow
+   values below, so they're intentionally left out of this list. */
+.bar,.spine,.col,.card,.stop,.good,.bad,.step,.num,.trig,.w,
 .todo,.tile,table,.eg{
   box-shadow:6px 6px 14px var(--shadow-d), -6px -6px 14px var(--shadow-l);
 }
@@ -113,8 +115,10 @@ code{background:var(--rule); padding:2px 6px; border-radius:6px; font-size:.9em}
 @media(max-width:640px){.pair{grid-template-columns:1fr}}
 
 .col{border-radius:var(--r-lg); padding:22px; background:var(--card)}
-.col.g{background:var(--g-bg)} .col.c{background:var(--c-bg)}
-.col.g h3{color:var(--g)} .col.c h3{color:var(--c)}
+.col.g{background:var(--g-bg)}
+.col.c{background:var(--c-bg)}
+.col.g h3{color:var(--g)}
+.col.c h3{color:var(--c)}
 .col h3{margin:0 0 4px; font-size:1.15em}
 .col .tag{font-size:.8em; font-weight:700; color:var(--soft); display:block; margin-bottom:12px}
 .col ul{padding-left:20px; margin:0}
