@@ -93,8 +93,11 @@ body{
 .nav a[aria-current]{background:var(--g-bg); color:var(--g); border-color:var(--g)}
 
 .back{display:inline-block; font-size:.88em; font-weight:700; color:var(--soft);
-     text-decoration:none; margin-bottom:20px}
-.back:hover{color:var(--ink)}
+     text-decoration:none; margin-bottom:20px; padding:8px 15px;
+     border:2px solid transparent; border-radius:var(--r-pill); background:var(--card);
+     box-shadow:4px 4px 10px var(--shadow-d), -4px -4px 10px var(--shadow-l);
+     transition:all .2s}
+.back:hover{color:var(--ink); border-color:var(--g)}
 
 /* ── type ────────────────────────────────────── */
 h1{font-size:1.85em; line-height:1.3; margin:0 0 6px; font-weight:700}
@@ -202,9 +205,11 @@ th{background:transparent; font-weight:700; color:var(--soft)}
 
 @media print{
   .bar,.nav,.back{display:none}
-  body{background:#fff; font-size:11pt; padding:0}
+  body{background:#fff; color:#000; font-size:11pt; padding:0}
   *{box-shadow:none!important}
-  .col,.stop,.step,.trig,.spine,.card,.good,.bad{break-inside:avoid; border:1px solid var(--rule)}
+  .spine,.col,.card,.stop,.good,.bad,.eg,.step,.trig,.w,.todo,.tile,table{
+    background:#fff; break-inside:avoid; border:1px solid #777}
+  .num{background:#fff; border-color:#777}
   h2{break-after:avoid}
 }
 @media (prefers-reduced-motion:reduce){
