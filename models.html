@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Models in detail — Which AI, when</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bar"><div class="wrap"></div></div>
+
+<div class="wrap">
+
+  <a class="back" href="index.html">← Back</a>
+
+  <h1>Models in detail</h1>
+  <p class="sub">Four names in the picker. You'll use two.</p>
+
+  <div class="spine">
+    <p class="big">Sonnet by default.<br>Opus when it matters.</p>
+    <p class="note">If you never read past this line, you'll be fine.</p>
+  </div>
+
+  <h2>The four</h2>
+
+  <div class="card">
+    <h3>Sonnet 5 — start here</h3>
+    <p><b>Use for:</b> almost everything. Reading documents, analysis, drafting, questions, summarising.</p>
+    <p><b>Why:</b> fast, and the huge memory means you can paste a whole regulation in without chopping it up.</p>
+    <p><b>Don't:</b> reach for Opus first out of habit. Sonnet handles most of what you do, and burns less of your weekly allowance.</p>
+  </div>
+
+  <div class="card">
+    <h3>Opus 5 — the hard ones</h3>
+    <p><b>Use for:</b> cross-referencing several regulations at once. Spotting what's missing. Anything where being confidently wrong would cost you in front of a client or board.</p>
+    <p><b>Why:</b> better at holding many constraints at once without losing one halfway through.</p>
+    <p><b>Cost:</b> uses your allowance faster. Worth it on the hard 10%, wasteful on the routine 90%.</p>
+  </div>
+
+  <div class="card">
+    <h3>Haiku 4.5 — quick and small</h3>
+    <p><b>Use for:</b> reformatting, tidying a list, short factual lookups, turning notes into bullets.</p>
+    <p><b>Don't:</b> give it anything needing judgement, or a very long document — its memory is much smaller.</p>
+  </div>
+
+  <div class="card">
+    <h3>Fable 5.1 — not for you</h3>
+    <p>Built for heavy coding work. On Pro it's metered separately rather than included. Ignore it.</p>
+  </div>
+
+  <h2>Extended thinking</h2>
+
+  <div class="card">
+    <h3>The toggle worth knowing</h3>
+    <p>Makes the model work through a problem before answering instead of replying straight away. Slower, and uses more of your allowance.</p>
+    <p><b>Turn it on for:</b> "does this apply to us", multi-step reasoning, anything where you want the working shown.</p>
+    <p><b>Leave it off for:</b> drafting, summarising, reformatting, quick questions.</p>
+  </div>
+
+  <h2>Rough limits</h2>
+
+  <table>
+    <tr><th>Model</th><th>Memory (context)</th><th>Longest reply</th></tr>
+    <tr><td><b>Opus 5</b></td><td>~1M tokens</td><td>~128K tokens</td></tr>
+    <tr><td><b>Sonnet 5</b></td><td>~1M tokens</td><td>~128K tokens</td></tr>
+    <tr><td><b>Haiku 4.5</b></td><td>~200K tokens</td><td>~64K tokens</td></tr>
+  </table>
+
+  <p>A rough feel: <b>1M tokens is around 700,000 words</b> — several hundred pages. You will not hit that on a normal day. Haiku's 200K is still around 140,000 words.</p>
+
+  <h2>How the allowance works</h2>
+
+  <div class="card">
+    <h3>Two limits at once</h3>
+    <p>A <b>rolling 5-hour session limit</b> and a <b>weekly cap</b>. Anthropic doesn't publish exact token numbers for either, so nobody can tell you "you get X messages".</p>
+    <p><b>What this means in practice:</b> heavy Opus use in one afternoon can slow you down that evening. Using Sonnet for routine work keeps Opus available for when you need it.</p>
+  </div>
+
+  <div class="stop">
+    <h3>If you hit a limit</h3>
+    <ul>
+      <li>It resets — the app tells you when</li>
+      <li>Switch to a smaller model rather than waiting</li>
+      <li>Repeated limits mid-week means you're using Opus for routine work</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Make one. Never re-explain yourself again.</h3>
+    <p>A Project holds your standing context — who you are, your organisation, your terminology, how you want answers formatted. It loads into every chat inside that Project automatically.</p>
+    <p>As you add more documents, Claude switches to a retrieval mode to handle the volume. You don't need to manage that.</p>
+    <p><b>This is the fix for "it forgets half my prompt."</b></p>
+  </div>
+
+  <div class="todo">
+    <h3>To fill in: your standing brief</h3>
+    <p>Paste the exact text you put into your Project, so you can rebuild it if you ever lose it.</p>
+  </div>
+
+  <p class="note-src"><b>Where this came from:</b> model names are Anthropic's current listing. Context and output figures are third-party reporting, not Anthropic's own docs — treat as approximate. The 5-hour-plus-weekly structure is documented; exact token counts are not published, so any page quoting precise message counts is guessing. Check <a href="https://support.claude.com">support.claude.com</a> if a number matters.</p>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

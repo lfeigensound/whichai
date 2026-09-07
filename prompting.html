@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>How to ask — Which AI, when</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bar"><div class="wrap"></div></div>
+
+<div class="wrap">
+
+  <a class="back" href="index.html">← Back</a>
+
+  <h1>How to ask</h1>
+  <p class="sub">Four habits. Then real examples.</p>
+
+  <div class="spine">
+    <p class="big">Say what you want,<br>what it's for,<br>and what would make it wrong.</p>
+  </div>
+
+  <h2>The four habits</h2>
+
+  <div class="step"><div class="num">1</div><div class="body">
+    <h3>Give it the job, not the topic</h3>
+    <p>"Tell me about EESSH2" is a topic. "Which EESSH2 milestones fall in the next 18 months, and which of our stock types are at risk" is a job.</p>
+  </div></div>
+
+  <div class="step"><div class="num">2</div><div class="body">
+    <h3>Say who it's for</h3>
+    <p>A board, a client, a colleague, or yourself. This changes length, tone and how much it explains. It cannot guess.</p>
+  </div></div>
+
+  <div class="step"><div class="num">3</div><div class="body">
+    <h3>Give it permission to say no</h3>
+    <p>Add: <i>"If you can't verify something, say so rather than filling the gap."</i> This one line prevents most invented regulations.</p>
+  </div></div>
+
+  <div class="step"><div class="num">4</div><div class="body">
+    <h3>Paste the source in</h3>
+    <p>Don't ask what a regulation says — paste it and ask what it means. Night-and-day difference in accuracy.</p>
+  </div></div>
+
+  <h2>Real examples</h2>
+
+  <div class="bad">
+    <h3>✗ Too vague</h3>
+    <div class="eg">What are the ESG requirements for social housing?</div>
+    <p>No jurisdiction, no timeframe, no purpose. You'll get a generic, mostly English, possibly outdated summary.</p>
+  </div>
+
+  <div class="good">
+    <h3>✓ Same question, working</h3>
+    <div class="eg">I've pasted the EESSH2 guidance below.
+
+Which milestones fall before December 2027, and what would a
+mid-size Scottish RSL need to have in place for each?
+
+For a board audience — one page, table format.
+Scottish law only; flag anything that's England-and-Wales.
+If a date isn't in the text I've given you, say so rather
+than filling it in.
+
+[paste guidance]</div>
+    <p>Source given, jurisdiction fenced, audience named, format set, permission to say "I don't know".</p>
+  </div>
+
+  <div class="bad">
+    <h3>✗ Asking it to remember what it can't</h3>
+    <div class="eg">What did the consultation I mentioned earlier say about retrofit funding?</div>
+    <p>In a new chat it has no idea. Even in a long chat, early detail gets lost. Never assume it's holding something.</p>
+  </div>
+
+  <div class="good">
+    <h3>✓ Re-paste, always</h3>
+    <div class="eg">Here's the consultation response again [paste].
+
+Compare its retrofit funding position against the draft
+position in our paper [paste].
+
+Where do they conflict? Quote the specific lines.</div>
+    <p>Both sources present. "Quote the specific lines" forces it to point at real text rather than paraphrasing from nothing.</p>
+  </div>
+
+  <div class="bad">
+    <h3>✗ Fishing for agreement</h3>
+    <div class="eg">I think we're compliant with SHQS on this — does that sound right to you?</div>
+    <p>You've told it the answer you want. Both models lean towards agreeing. You'll get validation, not a check.</p>
+  </div>
+
+  <div class="good">
+    <h3>✓ Asking to be challenged</h3>
+    <div class="eg">Here's our SHQS compliance position [paste].
+
+Argue the opposite. Where is this weakest? What would a
+regulator or a sceptical auditor push back on first?
+
+Don't soften it.</div>
+    <p>Now it's looking for holes instead of confirming you. This is the single highest-value prompt pattern in your work.</p>
+  </div>
+
+  <div class="bad">
+    <h3>✗ Everything at once</h3>
+    <div class="eg">Research the new Scottish retrofit regs, check our stock data against them, and write a board paper.</div>
+    <p>Three jobs. It'll do all three badly and you won't be able to tell which part went wrong.</p>
+  </div>
+
+  <div class="good">
+    <h3>✓ One job per message</h3>
+    <div class="eg">Message 1 (Gemini):  find and cite the current regs
+Message 2 (Claude):  here they are — what applies to us?
+Message 3 (Claude):  now draft the board paper from that</div>
+    <p>Each step checkable before the next. When something's wrong you know exactly where.</p>
+  </div>
+
+  <h2>Phrases worth keeping</h2>
+
+  <div class="card">
+    <p><b>"If you can't verify it, say so."</b> — stops invented detail</p>
+    <p><b>"Scottish law only. Flag anything England-and-Wales."</b> — stops the most common error in your field</p>
+    <p><b>"Quote the specific line."</b> — forces it back to the source</p>
+    <p><b>"Argue the opposite."</b> — breaks agreeableness</p>
+    <p><b>"What am I not asking that I should be?"</b> — surfaces the gap you didn't see</p>
+    <p><b>"Shorter."</b> — works, immediately, every time</p>
+  </div>
+
+  <div class="todo">
+    <h3>To fill in: your own</h3>
+    <p>Add prompts that worked well, with a line on why. This page is more useful with your wording than mine.</p>
+  </div>
+
+  <p class="note-src">These are patterns, not guarantees. Anthropic's own prompting guidance is at <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview">docs.claude.com</a> if you want the deeper version.</p>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
