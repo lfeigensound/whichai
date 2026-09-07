@@ -51,8 +51,15 @@ body{
 /* ── neumorphic surfaces ──────────────────────────────────────
    Raised: box-shadow pair reads as a soft bump off the page.
    Pressed ("on"/active state): shadow flips inward.
+   This list is grouped purely by shared shadow value (not by role) to
+   avoid repeating the same box-shadow declaration on every block-level
+   component -- each selector's other properties (background, borders,
+   pseudo-elements, etc.) are still defined independently further down.
    Note: `.bar button` and `.nav a` get their own (smaller) shadow
-   values below, so they're intentionally left out of this list. */
+   values below, so they're intentionally left out of this list. `.num`
+   keeps this outer raised shadow in addition to its own inner gradient-
+   ring background (see the `.num` rule below); the two don't conflict
+   since the shadow paints outside the circle's border-box. */
 .bar,.spine,.col,.card,.stop,.good,.bad,.step,.num,.trig,.w,
 .todo,.tile,table,.eg{
   box-shadow:6px 6px 14px var(--shadow-d), -6px -6px 14px var(--shadow-l);
